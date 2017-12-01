@@ -2,15 +2,19 @@
 inputString = raw_input("Input data please: ")
 
 # Initializing the linked list
-sumNum= 0
+sumNum = 0
 count = 0
+length = len(inputString)
+half = length/2
 
-while count < len(inputString):
+while count < length:
     num1 = int(inputString[count])
-    if count+1 == len(inputString):
-        numNext = int(inputString[0])
+    halfIndex = count + half
+
+    if halfIndex >= length:
+        numNext = int(inputString[(halfIndex - length)])
     else:
-        numNext = int(inputString[count + 1])
+        numNext = int(inputString[halfIndex])
 
     if num1 == numNext:
         sumNum += num1
