@@ -8,7 +8,7 @@ class Row:
 
     #part2
     def getEvenlyDifference(self):
-        for i in range (0, len(self.rList)):
+        for i in range(0, len(self.rList)):
             num = self.rList[i]
             for x in range(i+1, len(self.rList)):
                 if num % self.rList[x] == 0:
